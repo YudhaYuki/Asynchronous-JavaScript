@@ -59,6 +59,8 @@ async function getRecipesAW() {
 
     const related = await getRelated('Yudha Yuki');
     console.log(related);
+
+    return recipe;
 }
 
-getRecipesAW();
+getRecipesAW().then(result => console.log(`${result} is the best ever !`));
