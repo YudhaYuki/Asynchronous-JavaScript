@@ -6,6 +6,11 @@ const getIDs = new Promise((resolve, reject) => {
     }, 1500);
 });
 
-getIDs.then(IDs => {
+getIDs
+.then(IDs => {
     console.log(IDs);
+})
+
+.catch(error => {
+    console.log('Error !!!');
 });
