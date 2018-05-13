@@ -1,5 +1,4 @@
-// Promises to Async/Await
-
+// From Callback Hell to Promises
 
 const getIDs = new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -31,7 +30,6 @@ const getRelated = publisher => {
     }); 
 };
 
-/*
 getIDs
 .then(IDs => {
     console.log(IDs);
@@ -47,18 +45,3 @@ getIDs
 .catch(error => {
     console.log('Error !!!');
 });
-*/
-
-
-async function getRecipesAW() {
-    const IDs = await getIDs;
-    console.log(IDs);
-
-    const recipe = await getRecipe(IDs[2]);
-    console.log(recipe);
-
-    const related = await getRelated('Yudha Yuki');
-    console.log(related);
-}
-
-getRecipesAW();
